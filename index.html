@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DIRI Sufi Counselling Center</title>
+  <link rel="icon" type="image/x-icon" href="Image/Logo.png">
+
+  <!-- Daisy UI -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.12/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  
+
+</head>
+
+<body>
+  <header></header>
+  <main class="bg-[url('./banner-images.png')]">
+    <div class="flex justify-center items-center h-screen">
+      <div class="rounded-2xl bg-gray-200 w-96 max-w-sm shrink-0 shadow-2xl">
+        <div class="p-10 gap-5 flex flex-col ">
+          <span class="text-4xl font-bold">Login</span>
+          <div class="Email">
+            <p>Your Username </p>
+            <input type="input" class="input validator w-full my-2" required placeholder="Username" pattern="[A-Za-z][A-Za-z0-9\-]*"
+              minlength="3" maxlength="30" title="Only letters, numbers or dash" />
+          </div>
+          <div class="password">
+            <p class="">Your Password</p>
+            <input type="password" class="input validator w-full my-2" required placeholder="Password" minlength="8"
+              pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+              title="Must be more than 8 characters, including number, lowercase letter, uppercase letter" />
+          </div>
+          <button onclick="window.location.href='admin.html'" class="btn btn-soft btn-primary">login</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <body></body>
+
+</body>
+
+</html>
