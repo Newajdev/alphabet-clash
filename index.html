@@ -13,9 +13,9 @@
     href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
     rel="stylesheet">
 
-    <!-- Font Awasam -->
-     <link rel="stylesheet" href="./css/all.min.css">
-     <link rel="stylesheet" href="./css/fontawesome.min.css">
+  <!-- Font Awasam -->
+  <link rel="stylesheet" href="./css/all.min.css">
+  <link rel="stylesheet" href="./css/fontawesome.min.css">
 
   <!-- Daisy UI -->
   <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.12/dist/full.min.css" rel="stylesheet" type="text/css" />
@@ -39,12 +39,12 @@
 <body>
   <header></header>
   <main class="min-h-screen bg-[#010313] bg-[url('./images/background.png')] bg-no-repeat bg-center">
-    <div id="playnow " class="hidden">
+    <div  id="playnow" class="">
       <div class="flex-col flex justify-center items-center h-screen">
         <h1 class="text-[170px] text-white anton">ALPHABET CLASH</h1>
         <p class="poppins text-white font-medium text-2xl mb-16">Unleash Your Keyboard Kung Fu : Press “Enter” to Play
         </p>
-        <div class="btn text-black font-medium poppins">Play Now</div>
+        <div onclick="play()" class="btn text-black font-medium poppins">Play Now</div>
       </div>
 
     </div>
@@ -57,7 +57,7 @@
             </p>
           </div>
           <div class="flex justify-center items-center h-full">
-            <p id="current-alphabet" class="text-black text-9xl font-bold uppercase">Y</p>
+            <p id="current-alphabet" class="text-black text-9xl font-bold uppercase ">Y</p>
           </div>
         </div>
         <!-- keyboard -->
@@ -97,25 +97,27 @@
           </div>
         </div>
         <!-- score -->
-         <div class="flex w-1/2 justify-between">
-          <div class=" text-red-300 poppins bg-[#894189] p-3 rounded-full px-5">Life <i class="fa-solid fa-heart-circle-bolt"></i> <span class="text-white">05</span></div>
+        <div class="flex w-1/2 justify-between">
+          <div  class=" text-red-300 poppins bg-[#894189] p-3 rounded-full px-5">Life  <i
+              class="fa-solid fa-heart-circle-bolt mx-1"></i> <span id="curent-life" class="text-white">05</span></div>
 
-          <div class=" text-red-300 poppins bg-[#360490] p-3 rounded-full px-5">Score <i class="fa-solid fa-coins"></i> <span class="text-white">05</span></div>
+          <div class=" text-red-300 poppins bg-[#360490] p-3 rounded-full px-5">Score  <i class="fa-solid fa-coins mx-1"></i>
+            <span id="curent-score" class="text-white">  0</span></div>
 
-         </div>
+        </div>
 
 
       </div>
 
     </div>
-    <div id="gameover">
+    <div id="gameover" class="hidden">
       <div class="h-screen flex justify-center items-center ">
         <div>
           <div class="card bg-[#6C0EEB] border border-[#a466f5] text-primary-content w-96">
             <div class="card-body">
-              <h2 class="card-title text-6xl text-white font-bold justify-center">Score: <span>14</span></h2>
+              <h2 class="card-title text-6xl text-white font-bold justify-center">Score: <span id="total-Score">14</span></h2>
               <div class="card-actions justify-center my-4">
-                <button class="btn text-lg font-bold  text-black">Play Again</button>
+                <button onclick="play()" class="btn text-lg font-bold  text-black">Play Again</button>
               </div>
               <p class="flex justify-center text-lg  text-white font-medium">Practice will make you Pro</p>
 
@@ -123,12 +125,16 @@
           </div>
         </div>
       </div>
-      
+
 
     </div>
   </main>
+  <footer></footer>
 
-  <body></body>
+  <!-- Scripts -->
+  <script src="./Scripts/utility.js"></script>
+  <script src="./Scripts/playgame.js"></script>
+
 
 </body>
 
