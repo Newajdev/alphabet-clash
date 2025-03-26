@@ -39,21 +39,31 @@
 <body>
   <header></header>
   <main class="min-h-screen bg-[#010313] bg-[url('./images/background.png')] bg-no-repeat bg-center">
-    <div  id="playnow" class="">
-      <div class="flex-col flex justify-center items-center h-screen">
-        <h1 class="text-[170px] text-white anton">ALPHABET CLASH</h1>
-        <p class="poppins text-white font-medium text-2xl mb-16">Unleash Your Keyboard Kung Fu : Press “Enter” to Play
-        </p>
-        <div onclick="playnow()" class="btn text-black font-medium poppins">Play Now</div>
+
+    <div id="gameover" class="">
+      <div class="h-screen flex justify-center items-center ">
+        <div>
+          <div class="card bg-[#6C0EEB] border border-[#a466f5] text-primary-content w-96">
+            <div class="card-body">
+                <p class="flex justify-center text-lg  text-white font-medium">Game Over!</p>
+              <h2 class="card-title text-6xl text-white font-bold justify-center">Score: <span id="total-Score">00</span></h2>
+              <div class="card-actions justify-center my-4">
+                <button onclick="window.location.href='playground.html'" id="gameover" class="btn text-lg font-bold  text-black">Play Again</button>
+              </div>
+              <p class="flex justify-center text-lg  text-white font-medium">Practice will make you Pro</p>
+
+            </div>
+          </div>
+        </div>
       </div>
+
 
     </div>
   </main>
   <footer></footer>
 
   <!-- Scripts -->
-  <script src="./Scripts/playnow.js"></script>
-
+   <script src="./Scripts/FinalScore.js"></script>
 
 </body>
 

@@ -1,46 +1,58 @@
-function addClassById (elementId){
-    const ElementID= document.getElementById(elementId);
-    ElementID.classList.add ('hidden');
 
-}
-function removeClassById (elementId){
-    const ElementID= document.getElementById(elementId);
-    ElementID.classList.remove ('hidden');
 
+function addColorByElementsId(ElementId) {
+    const getElement = document.getElementById(ElementId);
+    getElement.classList.add('bg-[#FFA500]');
 }
-
-function addColorById (elementId){
-    const element = document.getElementById(elementId);
-    element.classList.add ('bg-[#FFA500]');    
+function addWarningColorByElementsId(ElementId) {
+    const getElement = document.getElementById(ElementId);
+    getElement.classList.add('bg-[#FF0000]');
 }
-function removeColorById (elementId){
-    const element = document.getElementById(elementId);
-    element.classList.remove ('bg-[#FFA500]');    
+function removeWarningColorByElementsId(ElementId) {
+    const getElement = document.getElementById(ElementId);
+    getElement.classList.remove('bg-[#FF0000]');
 }
-
-function getElementById (elementId){
-    const CurrentScore = document.getElementById(elementId)
-    const socreText = CurrentScore.innerText;
-    const Scorenum = parseInt(socreText)
+function removeColorByElementsId(ElementId) {
+    const getElement = document.getElementById(ElementId);
+    getElement.classList.remove('bg-[#FFA500]');
 }
 
 
+function getTextByElementId(ElementId , innerText) {
 
-
-function Alphabet(){
-
-    const alphabetString = 'abcdefghijklmnopqrstuvwxyz'
-    const alphabets = alphabetString.split('')
-    // console.log(alphabets);
-
-    const randomNumber = Math.random()*25;
-    const randomindex = Math.round(randomNumber);
-    
-    const alphabet = alphabets[randomindex];
-    // console.log(alphabet);
+    const getElement = document.getElementById(ElementId);
     
 
-    return alphabet;
-    
+    if(getElement.innerText < 9){
+        getElement.innerText = "0"+innerText;
+    }else{
+        getElement.innerText = innerText;
+    }
+
+
+
+}
+
+function getTextValueByElementId(ElementId) {
+
+    const getElement = document.getElementById(ElementId);
+    const Stringvalue = getElement.innerText;
+    const value = parseInt(Stringvalue);
+
+    return value
+
+
+}
+
+
+function getRandomAlphabet() {
+    const AlphabetString = 'abcdefghijklmnopqrstuvwxyz';
+    const AlphabetArray = AlphabetString.split('')
+
+    const Rendomnum = Math.round(Math.random() * 25);
+    const RandomAlphabet = AlphabetArray[Rendomnum];
+
+    return RandomAlphabet;
+
 
 }

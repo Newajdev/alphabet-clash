@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ALPHABET CLASH</title>
+  <link rel="icon" type="image/x-icon" href="./images/play.png">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
+  <!-- Font Awasam -->
+  <link rel="stylesheet" href="./css/all.min.css">
+  <link rel="stylesheet" href="./css/fontawesome.min.css">
+
+  <!-- Daisy UI -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.12/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    .anton {
+      font-family: "Anton", sans-serif;
+    }
+
+    .poppins {
+      font-family: "Poppins", sans-serif;
+      ;
+    }
+  </style>
+
+
+
+</head>
+
+<body>
+  <header></header>
+  <main class="min-h-screen bg-[#010313] bg-[url('./images/background.png')] bg-no-repeat bg-center">
+    <div id="playground" class="">
+      <div class="flex flex-col items-center gap-20 pt-20">
+        <!-- Screen -->
+        <div class="artboard artboard-horizontal phone-6 border-[20px] rounded-2xl border-[#010313CC] bg-[#FFFFFFB3]">
+          <div class="flex justify-center">
+            <p class="bg-[#2F2941] px-6 pb-4 rounded-b-xl text-white">Don't watch keyboard while playing...
+            </p>
+          </div>
+          <div class="flex justify-center items-center h-full">
+            <p id="displayAlphabet" class="text-black text-9xl font-bold uppercase ">Y</p>
+          </div>
+        </div>
+        <!-- keyboard -->
+        <div class="keyborad w-[685px]">
+          <div class="my-1 flex w-full justify-center gap-3  ">
+            <kbd id="q" class="kbd p-3 w-14">q</kbd>
+            <kbd id="w" class="kbd p-3 w-14">w</kbd>
+            <kbd id="r" class="kbd p-3 w-14">r</kbd>
+            <kbd id="e" class="kbd p-3 w-14">e</kbd>
+            <kbd id="t" class="kbd p-3 w-14">t</kbd>
+            <kbd id="y" class="kbd p-3 w-14">y</kbd>
+            <kbd id="u" class="kbd p-3 w-14">u</kbd>
+            <kbd id="i" class="kbd p-3 w-14">i</kbd>
+            <kbd id="o" class="kbd p-3 w-14">o</kbd>
+            <kbd id="p" class="kbd p-3 w-14">p</kbd>
+          </div>
+          <div class="my-1 flex w-full justify-center gap-3">
+            <kbd id="a" class="kbd p-3 w-14">a</kbd>
+            <kbd id="s" class="kbd p-3 w-14">s</kbd>
+            <kbd id="d" class="kbd p-3 w-14">d</kbd>
+            <kbd id="f" class="kbd p-3 w-14">f</kbd>
+            <kbd id="g" class="kbd p-3 w-14">g</kbd>
+            <kbd id="h" class="kbd p-3 w-14">h</kbd>
+            <kbd id="j" class="kbd p-3 w-14">j</kbd>
+            <kbd id="k" class="kbd p-3 w-14">k</kbd>
+            <kbd id="l" class="kbd p-3 w-14">l</kbd>
+          </div>
+          <div class="my-1 flex w-full justify-center gap-3 ">
+            <kbd id="z" class="kbd p-3 w-14">z</kbd>
+            <kbd id="x" class="kbd p-3 w-14">x</kbd>
+            <kbd id="c" class="kbd p-3 w-14">c</kbd>
+            <kbd id="v" class="kbd p-3 w-14">v</kbd>
+            <kbd id="b" class="kbd p-3 w-14">b</kbd>
+            <kbd id="n" class="kbd p-3 w-14">n</kbd>
+            <kbd id="m" class="kbd p-3 w-14">m</kbd>
+            <kbd id="/" class="kbd p-3 w-14">/</kbd>
+          </div>
+        </div>
+        <!-- score -->
+        <div class="flex w-1/2 justify-between">
+          <div  class=" text-red-300 poppins bg-[#894189] p-3 rounded-full px-5">Life  <i
+              class="fa-solid fa-heart-circle-bolt mx-1"></i> <span id="curent-life" class="text-white">05</span></div>
+
+          <div class=" text-red-300 poppins bg-[#360490] p-3 rounded-full px-5">Score  <i class="fa-solid fa-coins mx-1"></i>
+            <span id="default-Score" class="text-white">  0</span></div>
+        </div>
+        <div class="flex justify-center">
+          <p class=" text-white">Press "Escape" to Stop the game
+          </p>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer></footer>
+
+  <!-- Scripts -->
+  <script src="./Scripts/utility.js"></script>
+  <script src="./Scripts/playgame.js"></script>
+
+
+</body>
+
+</html>
